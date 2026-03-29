@@ -1,7 +1,7 @@
 pipeline{
 	agent any
 	   stages{
-		    stage('Deploy Q1-Branch'){
+		    stage('Deploy Q1'){
 		       steps{
 			    git branch: 'Q1', url: 'https://github.com/ShreehariBandrawad/Dockerrepo2.git'
 			    script{
@@ -16,9 +16,9 @@ pipeline{
 
 			}	
 		    }
-	            stage('Deploy Q2-Branch'){
+	            stage('Deploy Q2'){
                        steps{
-                            git branch: 'Q2-Branch', url: 'https://github.com/ShreehariBandrawad/Dockerrepo2.git'
+                            git branch: 'Q2', url: 'https://github.com/ShreehariBandrawad/Dockerrepo2.git'
                             script{
                                 sh '''
                                 docker rm -f c2 || true
@@ -31,9 +31,9 @@ pipeline{
 
                         }
                     }
-	             stage('Deploy Q3-Branch'){
+	             stage('Deploy Q3'){
                        steps{
-                            git branch: 'Q3-Branch', url: 'https://github.com/ShreehariBandrawad/Dockerrepo2.git'
+                            git branch: 'Q3', url: 'https://github.com/ShreehariBandrawad/Dockerrepo2.git'
                             script{
                                 sh '''
                                 docker rm -f c3 || true
