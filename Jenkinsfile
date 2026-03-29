@@ -27,7 +27,7 @@ pipeline{
                                 docker run -d --name c2 -p 90:80 httpd
                                 docker exec c2 rm -rf /usr/local/apache2/htdocs/*
                                 docker cp . c2:/usr/local/apache2/htdocs/
-								                docker exec c2 chmod -R 755 /usr/local/apache2/htdocs/
+								docker exec c2 chmod -R 755 /usr/local/apache2/htdocs/
                                 '''
                             }
 
@@ -42,7 +42,7 @@ pipeline{
                                 docker run -d --name c3 -p 8080:80 httpd
                                 docker exec c3 rm -rf /usr/local/apache2/htdocs/*
                                 docker cp . c3:/usr/local/apache2/htdocs/
-								                docker exec c3 chmod -R 755 /usr/local/apache2/htdocs/
+								docker exec c3 chmod -R 755 /usr/local/apache2/htdocs/
                                 '''
                             }
 
